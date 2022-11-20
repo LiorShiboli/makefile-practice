@@ -2,10 +2,13 @@
 #include "numclass.h"
 #include <math.h>
 int isPrime(int num){
-    int isprime = 0;
-    for (int i = 0; i < sqrt( (double) num); i++)
+    for (int i = 2; i < sqrt( (double) num); i++)
     {
+        if (num%i==0)
+        {
+            return 0;
+        }
         
     }
-    
+    return 1;
 }
