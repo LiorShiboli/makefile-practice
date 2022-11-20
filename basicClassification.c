@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "numclass.h"
-#include <math.h>
 int isPrime(int num){
-    for (int i = 2; i < sqrt( (double) num); i++)
+    for (int i = 2; i < num/2; i++)
     {
         if (num%i==0)
         {
@@ -24,6 +23,6 @@ int isStrong(int num){
         }
         sumStrong+=factorial;
         tempNum /=10;
-    } while (tempNum>0);
+    } while (tempNum);
     return (sumStrong==num);
 }
