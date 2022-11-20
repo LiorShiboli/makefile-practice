@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "numclass.h"
 int isPrime(int num){
-    for (int i = 2; i < num/2; i++)
+    for (int i = 2; i*i < num/2; i++)
     {
         if (num%i==0)
         {
@@ -13,16 +13,15 @@ int isPrime(int num){
 }
 int isStrong(int num){
     int sumStrong=0;
-    int tempNum=num;
     do
     {
-        int factorial=1,digit=tempNum%10;
+        int factorial=1,digit=num%10;
         for (int i = 0; i <digit; i++)
         {
             factorial *=i;
         }
         sumStrong+=factorial;
-        tempNum /=10;
-    } while (tempNum);
+        num /=10;
+    } while (num);
     return (sumStrong==num);
 }
