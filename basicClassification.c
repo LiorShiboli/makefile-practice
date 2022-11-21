@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "numclass.h"
 int isPrime(int num){
     for (int i = 2; i*i < num/2; i++)
