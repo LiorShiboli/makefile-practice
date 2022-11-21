@@ -17,6 +17,8 @@ advancedClassificationLoop.o:advancedClassificationLoop.c $(CLASS)
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c
 main.o: main.c $(CLASS)
 	$(CC) $(FLAGS) -c main.c 
+maindloop: $(OBJECTS_MAIN) libclassloops.so
+	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) libclassloops.so
 .PHONY:clean all
 clean:
-	rm -f *.o *.a *.so 
+	rm -f *.o *.a *.so maindloop
