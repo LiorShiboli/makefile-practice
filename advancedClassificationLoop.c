@@ -15,7 +15,7 @@ int isArmstrong(int num){
     }
     
     int sum=0,length=0;
-    for (int i = 1; i <= num; i*10)
+    for (int i = 1; i <= num; i*=10)
     {
         length++;
     }
@@ -27,7 +27,8 @@ int isArmstrong(int num){
         {
             pow*=digit;
         }
+        sum+=pow;
         num/=10;
     }
-    
+    return (sum==num);
 }

@@ -1,4 +1,5 @@
-#include <stdio.h>>
+#include <stdio.h>
+#include "numclass.h"
 int main (){
     int lowerRange,upperRange;
     scanf("%d",&lowerRange);
