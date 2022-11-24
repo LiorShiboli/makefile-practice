@@ -4,7 +4,7 @@ int main (){
     int lowerRange,upperRange;
     scanf("%d",&lowerRange);
     scanf("%d",&upperRange);
-    for (int i = lowerRange; i < upperRange; i++)
+    for (int i = lowerRange; i <= upperRange; i++)
     {
         if (isPrime(i))
         {
@@ -12,7 +12,7 @@ int main (){
         }
         
     }
-    for (int i = lowerRange; i < upperRange; i++)
+    for (int i = lowerRange; i <= upperRange; i++)
     {
         if (isArmstrong(i))
         {
@@ -20,7 +20,7 @@ int main (){
         }
         
     }
-    for (int i = lowerRange; i < upperRange; i++)
+    for (int i = lowerRange; i <= upperRange; i++)
     {
         if (isStrong(i))
         {
@@ -36,4 +36,5 @@ int main (){
         }
         
     }
+    return 0;
 }
