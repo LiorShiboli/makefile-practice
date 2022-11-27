@@ -10,7 +10,7 @@ all: libclassloops.a libclassloops.so
 maindloop: $(OBJECTS_MAIN) libclassloops.so
 	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so
 main.o: main.c $(CLASS)
-	$(CC) $(FLAGS) -c main.c $(CLASS)
+	$(CC) $(FLAGS) -c main.c 
 
 libclassloops.a:$(LOOP)
 	$(AR) -rcs libclassloops.a $(LOOP)
